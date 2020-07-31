@@ -1,118 +1,202 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/external/bootstrap/css/bootstrap.min.css" >
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="generator" content="">
+	<title>Single Page</title>
 
-    <!-- style CSS -->
-    <link rel="stylesheet" href="style.css">
+	<!-- Bootstrap core CSS -->
+	<link href="assets/external/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Sota-Net</title>
-  </head>
-  <body>
-  	<header>
-  		<div class="container">
-    		<h1 class="h1 py-3">Sota-Net</h1>
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+
+		.box {
+
+			width: 100%;
+			height: 1000px;
+			background-color: aquamarine;
+		}
+	</style>
+	<!-- Custom styles for this template -->
+	<link href="dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+	<nav class="navbar navbar-expand-sm navbar-dark sticky-top bg-dark">
+		<a class="navbar-brand" href="#">SOTA-NET</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03"
+			aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarsExample03">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">Dropdown</a>
+					<div class="dropdown-menu" aria-labelledby="dropdown03">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<a class="dropdown-item" href="#">Something else here</a>
+					</div>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-md-0">
+				<a class="text-muted" href="#" aria-label="Search">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+						stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
+						viewBox="0 0 24 24" focusable="false">
+						<title>Search</title>
+						<circle cx="10.5" cy="10.5" r="7.5" />
+						<path d="M21 21l-5.2-5.2" />
+					</svg>
+				</a>
+			</form>
 		</div>
-	</header>
-
-
-	<!-- グローバルナビ -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-info">
-	  <a class="navbar-brand" href="#">Home</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-	  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-	    <ul class="navbar-nav">
-	      <li class="nav-item">
-	        <a class="nav-link" href="#">WordPress</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#">PHP</a>
-	      </li>
-	      <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          Dropdown link
-	        </a>
-	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	          <a class="dropdown-item" href="#">Action</a>
-	          <a class="dropdown-item" href="#">Another action</a>
-	        </div>
-	      </li>
-	    </ul>
-	  </div>
 	</nav>
 
+	<div class="container-fluid">
+		<div class="row">
+			<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+				<div class="sidebar-sticky pt-3 ">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link active" href="https://v4.bootcss.com/docs/components/navbar/#responsive-behaviors">
+								<span data-feather="home"></span>
+								Dashboard <span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://www.asobou.co.jp/blog/web/css-position">
+								<span data-feather="file"></span>
+								Orders
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="shopping-cart"></span>
+								Products
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="users"></span>
+								Customers
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="bar-chart-2"></span>
+								Reports
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="layers"></span>
+								Integrations
+							</a>
+						</li>
+					</ul>
 
-	<main class="bg-light">
-		<div class="container">
-			<!-- ビックアップ記事 -->
-			<div class="row py-3">
-				<!-- メインコンテンツ -->
-				<div class="col-md-8 col-12">
-					<div class="bg-white py-3 text-center">
-						<!-- 日付 -->
-						<p>2020/12/14</p>
+					<h6
+						class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+						<span>Saved reports</span>
+						<a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+							<span data-feather="plus-circle"></span>
+						</a>
+					</h6>
+					<ul class="nav flex-column mb-2">
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="file-text"></span>
+								Current month
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="file-text"></span>
+								Last quarter
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="file-text"></span>
+								Social engagement
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="file-text"></span>
+								Year-end sale
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
 
-						<!-- 記事タイトル -->
-						<h1 class="h2 px-3 pb-3 font-weight-bolder">記事・・・・記事・・・・記事・・・・記事・・・・記事・・・・記事・・・・</h2>
-						<!-- カテゴリ -->
-						<p><a href="">WordPress</a></p>
-						<!-- サムネイル -->
-						<div class="pb-3">
-							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home04.jpg">
+			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+				<div
+					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+					<h1 class="h2">Dashboard</h1>
+					<div class="btn-toolbar mb-2 mb-md-0">
+						<div class="btn-group mr-2">
+							<button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+							<button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
 						</div>
-						<!-- 本文 -->
-						<div class="text-left　px-2">
-						サンプル・・・・サンプル・・・・サンプル・・・・サンプル・・・・サンプル・・・・
-						</div>
-
+						<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+							<span data-feather="calendar"></span>
+							This week
+						</button>
 					</div>
 				</div>
+				<div class="box">
+				</div>
+				<div class="box"></div>
+				<div class="box"></div>
+			</main>
+
 			
-
-				<!-- サイドバー -->
-				<div class="col-md-4 col-12">
-					<!-- プロファール -->
-					<div class="container bg-white mb-5 py-5">
-						<div class="mx-5">
-							<img class="img-fluid rounded-circle" src="<?php echo get_template_directory_uri(); ?>/img/home05.jpg">
-						</div>
-						
-					</div>
-							
-				</div>
-			</div>
 		</div>
+	</div>
 
+	<footer class="blog-footer">
+		<p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a
+			href="https://twitter.com/mdo">@mdo</a>.</p>
+		<p>
+		  <a href="#">Back to top</a>
+		</p>
+	  </footer>
 
-		<footer class="bg-white">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 col-12">
-						<p>footerバー１１１１１１１</p>					
-					</div>
-					<div class="col-md-4 col-12">
-						<p>footerバー２２２２２２２</p>											
-					</div>
-				</div>
-			</div>
-		</footer>
-
-
-	</main>
-
-
-
-    <!-- jQueryの読み込み -->
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/external/bootstrap/jquery/jquery-3.5.1.min.js"></script>
-    <!-- Bootstrapの読み込み -->
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/external/bootstrap/js/bootstrap.min.js"></script>
-
-  </body>
+</body>
+<script type="assets/external/bootstrap/js/jquery.min.js"></script>
+<script type="assets/external/bootstrap/js/bootstrap.min.js"></script>
 </html>
